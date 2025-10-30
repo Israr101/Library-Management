@@ -1,7 +1,7 @@
 # Library Management – Full-Stack Project
 
 A simple Library Management system with:
-- **Backend:** Python Flask + SQLite (via SQLAlchemy), RESTful APIs, CORS enabled.
+- **Backend:** java + SQLite (via SQLAlchemy), RESTful APIs, CORS enabled.
 - **Frontend:** Vanilla HTML/CSS/JS using `fetch` to call the backend.
 - **Features:** Manage Books, Members, and Loans (Issue/Return), Search, Basic validation.
 
