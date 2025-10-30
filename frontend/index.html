@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Library Management</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+  <header>
+    <h1>📚 Library Management</h1>
+    <nav>
+      <button class="tab-btn" data-tab="books">Books</button>
+      <button class="tab-btn" data-tab="members">Members</button>
+      <button class="tab-btn" data-tab="loans">Loans</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="books" class="tab active">
+      <h2>Books</h2>
+      <div class="row">
+        <input id="bookSearch" placeholder="Search by title, author, ISBN"/>
+        <button id="btnSearchBooks">Search</button>
+      </div>
+      <div class="row">
+        <input id="title" placeholder="Title"/>
+        <input id="author" placeholder="Author"/>
+        <input id="isbn" placeholder="ISBN"/>
+        <input id="copies" type="number" min="1" value="1" placeholder="Copies"/>
+        <button id="btnAddBook">Add Book</button>
+      </div>
+      <table id="booksTable">
+        <thead><tr><th>Title</th><th>Author</th><th>ISBN</th><th>Copies</th><th>Available</th><th>Actions</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="members" class="tab">
+      <h2>Members</h2>
+      <div class="row">
+        <input id="memberName" placeholder="Name"/>
+        <input id="memberEmail" placeholder="Email"/>
+        <button id="btnAddMember">Add Member</button>
+      </div>
+      <table id="membersTable">
+        <thead><tr><th>Name</th><th>Email</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="loans" class="tab">
+      <h2>Loans</h2>
+      <div class="row">
+        <select id="loanBook"></select>
+        <select id="loanMember"></select>
+        <button id="btnIssue">Issue</button>
+      </div>
+      <table id="loansTable">
+        <thead><tr><th>Book</th><th>Member</th><th>Issued</th><th>Returned</th><th>Action</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built with Flask + Vanilla JS</p>
+  </footer>
+
+  <script>
+    window.API_BASE = "http://127.0.0.1:5000";
+  </script>
+  <script src="js/app.js"></script>
+</body>
+</html>
